@@ -116,8 +116,8 @@ app.get('/top-purchasers', async (req, res) => {
       ]).toArray();
 
       const grossQuantity = topPurchasers.reduce((acc, user) => acc + user.top_quantity, 0);
-const totalPrice = topPurchasers.reduce((acc, user) => acc + user.top_price, 0);
-const grossTotal = topPurchasers.reduce((acc, user) => acc + user.total_amount_spent, 0);
+      const totalPrice = topPurchasers.reduce((acc, user) => acc + user.top_price, 0);
+      const grossTotal = topPurchasers.reduce((acc, user) => acc + user.total_amount_spent, 0);
   
     //   res.json(topPurchasers);
     res.json({
